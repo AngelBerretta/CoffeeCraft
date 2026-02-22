@@ -6,12 +6,26 @@
     <title>CoffeeCraft - Café de Especialidad</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="coffee-cup">
+                <div class="coffee-steam"></div>
+                <div class="coffee-steam"></div>
+                <div class="coffee-steam"></div>
+            </div>
+            <p>Preparando tu experiencia...</p>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="logo">
+                <i class="fas fa-mug-hot"></i>
                 <h1>Coffee<span>Craft</span></h1>
             </div>
             <nav>
@@ -33,24 +47,60 @@
     </header>
 
     <section class="hero" id="inicio">
+        <!-- VIDEO DE FONDO -->
+        <video autoplay muted loop playsinline class="hero-video" poster="img/hero-bg.jpg">
+            <source src="video/coffee.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨ Café de Especialidad desde 2015</span>
+                </div>
                 <h2>El mejor café de especialidad en la ciudad</h2>
-                <p>Granos seleccionados y preparación artesanal</p>
-                <a href="#menu" class="btn">Ver menú</a>
+                <p>Granos seleccionados y preparación artesanal para una experiencia única</p>
+                <a href="#menu" class="btn btn-primary">
+                    <span>Ver menú</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
         </div>
     </section>
 
     <section class="menu-section" id="menu">
         <div class="container">
-            <h2 class="section-title">Nuestro Menú</h2>
-            <div class="filters">
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="espresso">Espresso</button>
-                <button class="filter-btn" data-filter="coldbrew">Cold Brew</button>
-                <button class="filter-btn" data-filter="pasteleria">Pastelería</button>
+            <div class="section-header">
+                <span class="section-badge">Nuestro Menú</span>
+                <h2 class="section-title">Descubre nuestras especialidades</h2>
+                <p class="section-description">Cada bebida es una obra de arte, preparada con pasión y los mejores ingredientes</p>
             </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="todos">
+                    <i class="fas fa-border-all"></i>
+                    <span>Todos</span>
+                </button>
+                <button class="filter-btn" data-filter="espresso">
+                    <i class="fas fa-coffee"></i>
+                    <span>Espresso</span>
+                </button>
+                <button class="filter-btn" data-filter="coldbrew">
+                    <i class="fas fa-glass-whiskey"></i>
+                    <span>Cold Brew</span>
+                </button>
+                <button class="filter-btn" data-filter="pasteleria">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Pastelería</span>
+                </button>
+            </div>
+
             <div class="menu-grid" id="productos-container">
                 <!-- Los productos se cargarán dinámicamente desde script.js -->
             </div>
@@ -59,38 +109,137 @@
 
     <section class="about-section" id="nosotros">
         <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Sobre Nosotros</h2>
-                <p>En CoffeeCraft, nos apasiona ofrecer café de especialidad de origen único, cultivado con cuidado y tostado para resaltar sus mejores sabores. Cada taza es una experiencia única, elaborada con dedicación.</p>
-                <p>Desde 2015, hemos compartido nuestra pasión por el café con la comunidad, creando un espacio acogedor donde el aroma del café recién molido llena el aire.</p>
-            </div>
-            <div class="about-image">
-                <img src="img/about-image.jpg" alt="Equipo CoffeeCraft" loading="lazy">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-badge">Sobre Nosotros</span>
+                    <h2 class="section-title">Pasión por el café desde 2015</h2>
+                    <p>En CoffeeCraft, nos apasiona ofrecer café de especialidad de origen único, cultivado con cuidado y tostado para resaltar sus mejores sabores. Cada taza es una experiencia única, elaborada con dedicación.</p>
+                    <p>Desde 2015, hemos compartido nuestra pasión por el café con la comunidad, creando un espacio acogedor donde el aroma del café recién molido llena el aire.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-target="10">0</h3>
+                                <p>Años de experiencia</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-target="50000">0</h3>
+                                <p>Tazas servidas</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-target="5000">0</h3>
+                                <p>Clientes felices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="img/about-image.jpg" alt="Equipo CoffeeCraft" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="contact-section" id="contacto">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <div class="section-header">
+                <span class="section-badge">Contacto</span>
+                <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+                <p class="section-description">Estamos aquí para ayudarte. Contáctanos y te responderemos lo antes posible</p>
+            </div>
+
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Información de contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Avenida del Café 456, Ciudad</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-                    <p><i class="fas fa-envelope"></i> info@coffeecraft.com</p>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Ubicación</h4>
+                            <p>Avenida del Café 456, Ciudad</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>info@coffeecraft.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Horario</h4>
+                            <p>Lun-Vie: 7am - 8pm</p>
+                            <p>Sáb-Dom: 8am - 9pm</p>
+                        </div>
+                    </div>
+
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+
                 <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="btn">Enviar</button>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Nombre</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Mensaje</label>
+                            <span class="form-bar"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span>Enviar mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -98,22 +247,44 @@
     </section>
 
     <div class="cart-modal">
+        <div class="cart-overlay"></div>
         <div class="cart-content">
             <div class="cart-header">
-                <h3>Tu Carrito</h3>
-                <span class="close-cart">×</span>
+                <h3>
+                    <i class="fas fa-shopping-bag"></i>
+                    Tu Carrito
+                </h3>
+                <button class="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
+
             <div class="cart-body">
                 <div class="cart-items" id="cart-items">
                     <!-- Los items del carrito se cargarán aquí -->
                 </div>
-                <div class="cart-total">
-                    <p>Total: <span id="cart-total">$0.00</span></p>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
                 </div>
             </div>
+
             <div class="cart-footer">
-                <button class="btn checkout-btn">Finalizar Compra</button>
-                <button class="btn clear-cart">Vaciar Carrito</button>
+                <button class="btn btn-success checkout-btn">
+                    <span>Finalizar Compra</span>
+                    <i class="fas fa-check"></i>
+                </button>
+                <button class="btn btn-outline clear-cart">
+                    <span>Vaciar Carrito</span>
+                    <i class="fas fa-trash"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -122,16 +293,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>CoffeeCraft</h3>
+                    <div class="footer-logo">
+                        <i class="fas fa-mug-hot"></i>
+                        <h3>CoffeeCraft</h3>
+                    </div>
                     <p>El mejor café de especialidad, preparado con pasión y cuidado.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Horario</h3>
-                    <p>Lunes a Viernes: 7am - 8pm</p>
-                    <p>Sábado y Domingo: 8am - 9pm</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Enlaces</h3>
+                    <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#menu">Menú</a></li>
@@ -139,14 +314,40 @@
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-section">
+                    <h4>Horario</h4>
+                    <ul>
+                        <li>Lunes a Viernes</li>
+                        <li>7:00 AM - 8:00 PM</li>
+                        <li>Sábado y Domingo</li>
+                        <li>8:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Avenida del Café 456</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@coffeecraft.com</li>
+                    </ul>
+                </div>
             </div>
+
             <div class="footer-bottom">
                 <p>© 2025 CoffeeCraft. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="db.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
