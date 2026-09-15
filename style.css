@@ -5,31 +5,31 @@
 /* Variables CSS - Tema moderno con gradientes */
 :root {
     /* Colores principales */
-    --primary-color: ***REMOVED***6F4E37;
-    --primary-light: ***REMOVED***8B6F47;
-    --primary-dark: ***REMOVED***4A3422;
-    --secondary-color: ***REMOVED***A67B5B;
-    --accent-color: ***REMOVED***D4A373;
+    --primary-color: #6F4E37;
+    --primary-light: #8B6F47;
+    --primary-dark: #4A3422;
+    --secondary-color: #A67B5B;
+    --accent-color: #D4A373;
     
     /* Colores neutros */
-    --white: ***REMOVED***FFFFFF;
-    --black: ***REMOVED***000000;
-    --bg-color: ***REMOVED***FFF8F0;
-    --surface-color: ***REMOVED***FFFFFF;
-    --text-primary: ***REMOVED***2C2C2C;
-    --text-secondary: ***REMOVED***6C757D;
-    --text-light: ***REMOVED***9E9E9E;
+    --white: #FFFFFF;
+    --black: #000000;
+    --bg-color: #FFF8F0;
+    --surface-color: #FFFFFF;
+    --text-primary: #2C2C2C;
+    --text-secondary: #6C757D;
+    --text-light: #9E9E9E;
     
     /* Colores de estado */
-    --success: ***REMOVED***10B981;
-    --warning: ***REMOVED***F59E0B;
-    --error: ***REMOVED***EF4444;
-    --info: ***REMOVED***3B82F6;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --info: #3B82F6;
     
     /* Gradientes modernos */
-    --gradient-primary: linear-gradient(135deg, ***REMOVED***6F4E37 0%, ***REMOVED***A67B5B 100%);
-    --gradient-warm: linear-gradient(135deg, ***REMOVED***D4A373 0%, ***REMOVED***A67B5B 100%);
-    --gradient-dark: linear-gradient(135deg, ***REMOVED***4A3422 0%, ***REMOVED***6F4E37 100%);
+    --gradient-primary: linear-gradient(135deg, #6F4E37 0%, #A67B5B 100%);
+    --gradient-warm: linear-gradient(135deg, #D4A373 0%, #A67B5B 100%);
+    --gradient-dark: linear-gradient(135deg, #4A3422 0%, #6F4E37 100%);
     --gradient-overlay: linear-gradient(135deg, rgba(111, 78, 55, 0.9) 0%, rgba(166, 123, 91, 0.9) 100%);
     
     /* Sombras modernas */
@@ -219,7 +219,7 @@ body {
 }
 
 .btn-success:hover {
-    background: ***REMOVED***059669;
+    background: #059669;
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }

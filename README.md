@@ -1,10 +1,10 @@
-***REMOVED*** CoffeeCraft ☕️
+# CoffeeCraft ☕️
 
 Sitio web estático para una cafetería ficticia llamado **CoffeeCraft**. Desarrollado como práctica de desarrollo web utilizando HTML, CSS y JavaScript.
 
 ---
 
-***REMOVED******REMOVED*** 🌐 Descripción
+## 🌐 Descripción
 
 Este proyecto es una simulación de la página principal de una cafetería. Incluye:
 
@@ -15,7 +15,7 @@ Este proyecto es una simulación de la página principal de una cafetería. Incl
 
 ---
 
-***REMOVED******REMOVED*** 🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
 
 - HTML5  
 - CSS3  
@@ -23,7 +23,7 @@ Este proyecto es una simulación de la página principal de una cafetería. Incl
 
 ---
 
-***REMOVED******REMOVED*** 📁 Estructura del proyecto
+## 📁 Estructura del proyecto
 
 ```
 CoffeeCraft/
@@ -37,7 +37,7 @@ CoffeeCraft/
 ---
 
 
-***REMOVED******REMOVED*** 🚀 Cómo usar
+## 🚀 Cómo usar
 
 1. Cloná el repositorio:
 
@@ -49,12 +49,12 @@ git clone https://github.com/AngelBerretta/CoffeeCraft.git
 
 ---
 
-***REMOVED******REMOVED*** 📌 Notas
+## 📌 Notas
 
 Este proyecto es solo con fines educativos y no representa una cafetería real.
 
 ---
 
-***REMOVED******REMOVED*** 📄 Licencia
+## 📄 Licencia
 
 MIT License © Angel Gabriel Berretta

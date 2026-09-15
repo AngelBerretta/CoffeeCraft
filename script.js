@@ -384,12 +384,12 @@ function initNavigation() {
     }
     
     // Smooth scroll
-    document.querySelectorAll('a[href^="***REMOVED***"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
             
             const targetId = anchor.getAttribute('href');
-            if (targetId === '***REMOVED***') return;
+            if (targetId === '#') return;
             
             const target = document.querySelector(targetId);
             if (target) {
